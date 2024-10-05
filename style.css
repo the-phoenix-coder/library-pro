@@ -1,0 +1,80 @@
+:root {
+    --primary-clr: #1E90FF;
+    --secondary-clr: #FF7F50;
+    --accent-clr: #32CD32;
+    --bg-clr: #F0F8FF;
+    --txt-clr: #333;
+    --btn-clr: #FF4500;
+    --btn-clr-dark: #D13700;
+}
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    color: var(--bg-clr);
+    outline: none;
+    border: 0;
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+    -webkit-border-radius: .2rem;
+    -moz-border-radius: .2rem;
+    -ms-border-radius: .2rem;
+    -o-border-radius: .2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn {
+    background-color: var(--btn-clr);
+}
+.btn:hover {
+    background-color: var(--btn-clr-dark);
+}
+.remove {
+    background-color: red;
+}
+input {
+    background-color: #DDD;
+    color: var(--txt-clr);
+    accent-color: white;
+    outline: none;
+    border: 0;
+    padding: .5rem;
+    font-weight: bold;
+}
+input::placeholder {
+    font-weight: bold;
+}
+body {
+    background-color: var(--bg-clr);
+    color: var(--txt-clr);
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+}
+h1 {
+    padding-top: 2rem;
+}
+h1, h2 {
+    text-align: center;
+    padding-block: 1rem;
+}
+.add_container,
+.find_container {
+    display: flex;
+    gap: 1rem;
+    padding-block: 1rem;
+}
+:is(.add_container, .find_container) > *:not(button) {
+    flex: 1;
+}
+th, td {
+    border: 1px solid var(--txt-clr);
+    padding-block: .5rem;
+}
+table tbody {
+    text-align: center;
+}
